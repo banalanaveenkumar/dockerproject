@@ -1,0 +1,8 @@
+version: '3'
+services:
+  movies:
+    image: banalanaveenkumar/doc.jenkins.venkyrepo:latest
+    ports:
+      - "90:80"
+  deploy:
+  replicas: 3
