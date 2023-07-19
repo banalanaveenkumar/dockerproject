@@ -4,24 +4,24 @@ services:
     image: banalanaveenkumar/trainrepo:latest
     ports:
       - "90:80"
-  deploy: 
+deploy: 
     replicas: 3
   nekki:
     image: banalanaveenkumar/dthrepo:latest
     ports:
       - "91:80"
-    deploy: 
+ deploy: 
       replicas: 3
   venky:
     image: banalanaveenkumar/ticketrepo:latest
     ports:
       - "92:80"
-    deploy: 
+ deploy: 
       replicas: 3
   sai:
     image: banalanaveenkumar/movierepo:latest
     ports:
       - "93:80"
-    deploy: 
+ deploy: 
       replicas: 3
 
