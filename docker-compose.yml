@@ -1,6 +1,6 @@
 version: '3'
 services:
-  movies:
+  venky:
     image: banalanaveenkumar/doc.jenkins.venkyrepo:latest
     ports:
       - "90:80"
