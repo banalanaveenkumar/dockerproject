@@ -1,8 +1,20 @@
 version: '3'
 services:
-  venky:
+  nani:
     image: banalanaveenkumar/doc.jenkins.venkyrepo:latest
     ports:
       - "90:80"
+  deploy: 3
+  replicas: 3
+ nekki:
+    image: banalanaveenkumar/doc.jenkins.venkyrepo:latest
+    ports:
+      - "91:80"
   deploy:
-  replicas: 1
+  replicas: 3
+ venky:
+    image: banalanaveenkumar/doc.jenkins.venkyrepo:latest
+    ports:
+      - "92:80"
+  deploy:
+  replicas: 3
