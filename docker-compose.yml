@@ -27,6 +27,6 @@ services:
   regi:
     image: banalanaveenkumar/resgistaionrepo:latest
     ports:
-      -94:80
+      - 94:80
     deploy: 
       replicas: 3
