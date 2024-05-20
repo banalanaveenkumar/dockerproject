@@ -1,0 +1,40 @@
+docker stock: docker swarm + docker compose.
+-------------
+git+docker+jenkins+apache2 project
+-----------------------------------                   
+
+
+pipeline {
+    agent any
+
+    stages {
+        stage('git checkout') {
+            steps {
+                git branch: 'main', url: 'https://github.com/banalanaveenkumar/dockerpro.git'
+            }
+        }
+        stage ('build') {
+            steps {
+                sh 'docker build -t $img .'
+            }
+        }
+        stage ('tag') {
+            steps {
+                sh 'docker tag $img $repo'
+            }
+        }
+        stage ('push') {
+            steps {
+                sh 'docker login -u banalanaveenkumar -p naveen123'
+                sh 'docker push $repo'
+            }
+        }
+        stage ('stack') {
+            steps {
+                sh 'docker stack deploy -c docker-compose.yml nani'
+            }
+        }
+    }
+    
+    
+}
